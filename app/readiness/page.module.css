@@ -1,0 +1,33 @@
+.page { background: var(--bg-white); min-height: 100vh; }
+
+.pageHeader { display: flex; align-items: center; height: 52px; padding: 0 8px; border-bottom: 1px solid var(--border); }
+.backBtn { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; transition: background 0.15s; }
+.backBtn:active { background: var(--gray-100); }
+.headerTitle { flex: 1; text-align: center; font-size: 16px; font-weight: 700; }
+
+.scoreHero { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 24px 20px 20px; border-bottom: 1px solid var(--border); }
+.gauge { width: 180px; height: auto; overflow: visible; }
+.levelPill { display: inline-flex; align-items: center; gap: 6px; padding: 7px 16px; border-radius: var(--r-full); font-size: 14px; font-weight: 700; }
+.scoreHint { font-size: 13px; color: var(--text-secondary); text-align: center; max-width: 290px; line-height: 1.4; }
+.scoreHint strong { color: var(--text-primary); }
+
+.levelDots { position: relative; display: flex; justify-content: space-around; padding: 16px 20px 14px; border-bottom: 1px solid var(--border); }
+.levelLine { position: absolute; top: 28px; left: 48px; right: 48px; height: 2px; background: var(--border); z-index: 0; }
+.levelDotGroup { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.dot { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; transition: all 0.3s; }
+.dotLabel { font-size: 9px; font-weight: 600; white-space: nowrap; }
+
+.section { padding: 14px 16px 0; }
+.sectionLabel { font-size: 12px; font-weight: 700; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.7px; margin-bottom: 10px; display: flex; align-items: center; gap: 5px; }
+
+.factorCard { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 14px; margin-bottom: 10px; }
+.factorTop { display: flex; align-items: center; justify-content: space-between; }
+.factorName { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+.factorRight { display: flex; align-items: center; gap: 8px; }
+.factorScore { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; }
+.factorBadge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: var(--r-full); }
+.factorDesc { font-size: 12px; color: var(--text-tertiary); line-height: 1.3; }
+
+.pBadge { width: 28px; height: 28px; border-radius: 50%; background: #FFF5F5; color: var(--tcb-red); font-size: 13px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+.disclaimer { font-size: 11px; color: var(--text-muted); text-align: center; line-height: 1.5; padding: 0 8px; margin-top: 4px; }

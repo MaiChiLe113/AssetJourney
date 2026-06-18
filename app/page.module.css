@@ -1,0 +1,218 @@
+.page { background: var(--bg-app); min-height: 100vh; }
+
+/* Status bar */
+.statusBar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 18px 0; height: var(--stat-h);
+  background: transparent; position: relative; z-index: 5;
+}
+.sbTime { font-size: 16px; font-weight: 700; }
+.sbIcons { display: flex; gap: 6px; align-items: center; }
+
+/* Battery */
+.battery {
+  width: 22px; height: 11px;
+  border: 1.5px solid currentColor; border-radius: 2px;
+  position: relative; overflow: visible;
+  display: flex; align-items: center;
+}
+.batteryFill { height: 100%; background: currentColor; border-radius: 1px; }
+.batteryTip { width: 2px; height: 5px; background: currentColor; margin-left: 1px; border-radius: 0 1px 1px 0; position: absolute; right: -3px; }
+
+/* Hero */
+.hero {
+  background: linear-gradient(180deg, #E8E4DC 0%, #F2EFE8 60%, #EDEBE5 100%);
+  padding: 0 16px 20px;
+  position: relative;
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.heroTop {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  padding: 6px 0 16px;
+}
+
+/* Priority badge */
+.priorityBadge {
+  display: flex; flex-direction: column; align-items: center;
+  width: 46px; height: 46px;
+  background: #4A3728;
+  border-radius: 50%;
+  justify-content: center;
+  gap: 0;
+}
+.priorityBadge span:first-child { font-size: 11px; font-weight: 800; color: #F5C842; }
+.prioritySub { font-size: 7px; font-weight: 600; color: rgba(245,200,66,0.8); letter-spacing: 0.3px; }
+
+.bellBtn {
+  width: 42px; height: 42px; border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; cursor: pointer;
+  backdrop-filter: blur(4px);
+}
+.notifBadge {
+  position: absolute; top: -2px; right: -2px;
+  min-width: 18px; height: 18px;
+  background: var(--tcb-red); color: #fff;
+  font-size: 9px; font-weight: 700;
+  border-radius: var(--r-full);
+  display: flex; align-items: center; justify-content: center;
+  border: 2px solid #E8E4DC;
+  padding: 0 3px;
+}
+
+/* Balance card */
+.balanceCard {
+  background: var(--white);
+  border-radius: var(--r-xl);
+  padding: 16px;
+  box-shadow: var(--sh-md);
+  position: relative; z-index: 2;
+}
+
+.balanceRow {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  margin-bottom: 14px;
+}
+.balanceLabel { font-size: 12px; color: var(--g500); margin-bottom: 4px; }
+.balanceMasked { font-size: 22px; font-weight: 700; letter-spacing: 3px; color: var(--g900); }
+
+.savingsPromo {
+  display: flex; gap: 10px; align-items: flex-start;
+  background: var(--g050); border-radius: var(--r-md);
+  padding: 10px 12px; margin-bottom: 14px;
+}
+.savingsPromoIcon { font-size: 24px; flex-shrink: 0; }
+.savingsPromoTitle { font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+.savingsPromoDesc { font-size: 12px; color: var(--g500); line-height: 1.35; }
+
+.sendNowBtn {
+  display: flex; align-items: center; justify-content: center;
+  background: var(--g900); color: #fff;
+  border-radius: var(--r-full);
+  padding: 10px 20px; font-size: 14px; font-weight: 700;
+  text-decoration: none; transition: all 0.15s; text-align: center;
+}
+.sendNowBtn:active { background: var(--g800); }
+
+/* Buildings decoration */
+.buildings {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 80px; display: flex; align-items: flex-end;
+  justify-content: center; gap: 4px; padding: 0 8px;
+  z-index: 1; opacity: 0.18;
+}
+.bld1,.bld2,.bld3,.bld4,.bld5,.bld6 { background: #8B9BB4; border-radius: 3px 3px 0 0; }
+.bld1 { width: 28px; height: 60px; }
+.bld2 { width: 22px; height: 48px; }
+.bld3 { width: 40px; height: 75px; }
+.bld4 { width: 32px; height: 55px; }
+.bld5 { width: 26px; height: 45px; }
+.bld6 { width: 36px; height: 65px; }
+
+/* Quick bar */
+.quickBar {
+  display: flex;
+  background: var(--white);
+  padding: 14px 8px 10px;
+  border-bottom: 1px solid var(--g150);
+}
+
+.quickItem {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; gap: 6px;
+  text-decoration: none; cursor: pointer;
+  padding: 4px 2px; border-radius: var(--r-md);
+  transition: background 0.12s; font-family: var(--font);
+}
+.quickItem:active { background: var(--g100); }
+.quickItemGray { cursor: default; }
+
+.quickIcon {
+  width: 48px; height: 48px;
+  background: var(--g100); border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.quickLabel {
+  font-size: 10px; font-weight: 500;
+  color: var(--g700); white-space: pre-line;
+  text-align: center; line-height: 1.25;
+}
+
+.moreArrow {
+  display: flex; align-items: center;
+  padding: 8px 12px 4px;
+  background: var(--white);
+}
+.moreArrowLine { flex: 1; height: 1px; background: var(--g150); }
+
+/* Dành cho bạn */
+.forYouSection { background: var(--white); padding: 12px 0 8px; }
+.forYouTitle { font-size: 18px; font-weight: 800; padding: 0 16px 12px; }
+
+.promoScroll {
+  display: flex; gap: 10px; overflow-x: auto;
+  padding: 0 16px 4px;
+  scrollbar-width: none; -webkit-overflow-scrolling: touch;
+}
+.promoScroll::-webkit-scrollbar { display: none; }
+
+/* Main promo card */
+.promoCard {
+  display: flex; min-width: 280px; flex-shrink: 0;
+  background: linear-gradient(135deg, #7B5E12 0%, #B88A1A 50%, #C9961C 100%);
+  border-radius: var(--r-xl); padding: 16px;
+  position: relative; overflow: hidden;
+}
+.promoCardContent { flex: 1; }
+.promoCardTitle { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.promoCardDesc { font-size: 12px; color: rgba(255,255,255,0.85); line-height: 1.4; margin-bottom: 14px; white-space: pre-line; }
+.promoCardBtn {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--g900); color: #fff;
+  border-radius: var(--r-full); padding: 8px 16px;
+  font-size: 13px; font-weight: 700; text-decoration: none;
+  transition: opacity 0.15s;
+}
+.promoCardBtn:active { opacity: 0.8; }
+.promoCardRight { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; min-width: 72px; }
+.promoTag {
+  background: rgba(255,255,255,0.25); color: #fff;
+  font-size: 9px; font-weight: 700; letter-spacing: 0.8px;
+  padding: 3px 7px; border-radius: var(--r-full);
+}
+.promoJar { font-size: 36px; }
+.promoRate { font-size: 20px; font-weight: 900; color: #fff; letter-spacing: -0.5px; }
+
+/* TechZ teaser */
+.promoCardAj {
+  display: flex; min-width: 220px; flex-shrink: 0;
+  background: linear-gradient(135deg, #FFF9F9 0%, #FFF0F0 100%);
+  border: 1.5px solid var(--tcb-red-mid);
+  border-radius: var(--r-xl); padding: 16px;
+  text-decoration: none; align-items: center; gap: 10px;
+  transition: transform 0.15s;
+}
+.promoCardAj:active { transform: scale(0.97); }
+.promoAjLeft { flex: 1; }
+.promoAjTag {
+  display: flex; align-items: center; gap: 5px;
+  font-size: 10px; font-weight: 700; color: var(--tcb-red);
+  margin-bottom: 5px;
+}
+.liveDot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--tcb-red);
+  animation: pulseDot 1.5s infinite;
+}
+.promoAjTitle { font-size: 14px; font-weight: 800; color: var(--g900); margin-bottom: 4px; }
+.promoAjDesc { font-size: 11px; color: var(--g500); line-height: 1.35; }
+.promoAjRight { font-size: 28px; line-height: 1.2; }
+
+/* Dots */
+.dotRow { display: flex; gap: 5px; justify-content: center; padding: 10px 0 4px; }
+.dotActive { width: 20px; height: 5px; background: var(--tcb-red); border-radius: var(--r-full); }
+.dot { width: 5px; height: 5px; background: var(--g300); border-radius: 50%; }

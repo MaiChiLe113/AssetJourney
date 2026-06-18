@@ -1,0 +1,475 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.greeting {
+  font-size: 14px;
+  color: var(--text-tertiary);
+  margin-bottom: 4px;
+}
+
+.headerTitle {
+  color: var(--text-primary);
+}
+
+.headerStats {
+  display: flex;
+  gap: 20px;
+}
+
+.headerStat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  padding: 8px 16px;
+}
+
+.headerStatIcon { font-size: 18px; }
+
+.headerStatValue {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.headerStatLabel {
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+/* Main grid */
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 24px;
+  align-items: start;
+}
+
+.leftCol, .rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Goal card */
+.goalCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-2xl);
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.goalCard::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary-red), #FF6B6B);
+}
+
+.goalHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.goalIcon {
+  font-size: 36px;
+  flex-shrink: 0;
+}
+
+.goalInfo { flex: 1; }
+
+.goalLabel {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-primary-red);
+  margin-bottom: 4px;
+}
+
+.goalTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.goalSub {
+  font-size: 13px;
+  color: var(--text-tertiary);
+}
+
+.goalAmounts {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.goalAmount {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+.goalAmountLabel {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-top: 2px;
+}
+
+.goalArrow {
+  flex: 1;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 18px;
+}
+
+.goalProgressRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  margin-top: 8px;
+}
+
+.goalProgressPct {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-primary-red);
+}
+
+.goalETA {
+  font-size: 13px;
+  color: var(--text-tertiary);
+}
+
+.goalStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+}
+
+.goalStat {
+  text-align: center;
+}
+
+.goalStatValue {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.goalStatLabel {
+  font-size: 11px;
+  color: var(--text-tertiary);
+}
+
+/* Card title row */
+.cardTitleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Badges */
+.badgeGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+.badgeItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  cursor: default;
+}
+
+.badgeLocked {
+  opacity: 0.3;
+}
+
+.badgeEmoji {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.badgeName {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Readiness card */
+.readinessCard {
+  background: linear-gradient(135deg, #1A1A2E, #1A1A1E);
+  border: 1px solid rgba(237, 28, 36, 0.2);
+  border-radius: var(--radius-2xl);
+  padding: 28px;
+}
+
+.readinessHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.readinessLabel {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-tertiary);
+  margin-bottom: 6px;
+}
+
+.readinessLevel {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Level dots */
+.levelDots {
+  position: relative;
+  display: flex;
+  gap: 0;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.levelLine {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  right: 22px;
+  height: 2px;
+  background: var(--border-subtle);
+  z-index: 0;
+}
+
+.levelDotWrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.levelDot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--bg-elevated);
+  color: var(--text-muted);
+  border: 2px solid var(--border-subtle);
+  transition: all var(--transition-base);
+}
+
+.levelDotActive {
+  color: #fff;
+  border-color: transparent;
+}
+
+.levelDotLabel {
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Next Best Actions */
+.actionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.actionItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-lg);
+  transition: background var(--transition-fast);
+}
+
+.actionItem:hover {
+  background: var(--bg-glass-hover);
+}
+
+.actionIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.actionContent { flex: 1; min-width: 0; }
+
+.actionTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.actionDesc {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  line-height: 1.4;
+}
+
+/* Activity */
+.activityList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.activityItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.activityItem:last-child {
+  border-bottom: none;
+}
+
+.activityDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-primary-red);
+  flex-shrink: 0;
+}
+
+.activityContent { flex: 1; }
+
+.activityDesc {
+  font-size: 13px;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.activityDate {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.activityValue { text-align: right; flex-shrink: 0; }
+
+.activityAmount {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-success-green);
+  display: block;
+}
+
+.activityPoints {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-warning-yellow);
+  display: block;
+}
+
+/* Coach CTA */
+.coachCta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(237,28,36,0.08), rgba(100,144,170,0.06));
+  border: 1px solid rgba(237,28,36,0.2);
+  border-radius: var(--radius-xl);
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.coachCta:hover {
+  border-color: rgba(237,28,36,0.4);
+  transform: translateY(-2px);
+}
+
+.coachCtaIcon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.coachCtaTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.coachCtaDesc {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  line-height: 1.4;
+}
+
+.coachCtaArrow {
+  font-size: 20px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  transition: transform var(--transition-base);
+}
+
+.coachCta:hover .coachCtaArrow {
+  transform: translateX(4px);
+  color: var(--color-primary-red);
+}
+
+@media (max-width: 1024px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .badgeGrid { grid-template-columns: repeat(3, 1fr); }
+  .goalStats { grid-template-columns: 1fr; }
+  .headerStats { display: none; }
+}

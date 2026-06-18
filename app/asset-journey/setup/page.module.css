@@ -1,0 +1,43 @@
+.page { background: var(--white); min-height: 100vh; }
+
+.cardSelected {
+  border-color: var(--tcb-red) !important;
+  background: linear-gradient(135deg, #FFF9F9, #FFF3F3) !important;
+}
+
+.cardTopRow { display: flex; justify-content: space-between; align-items: flex-start; }
+
+.prodIcon { width: 56px; height: 56px; border-radius: 16px; display: flex; align-items: center; justify-content: center; }
+
+.checkMark {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--tcb-red); color: #fff;
+  font-size: 14px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.ctaRow { padding: 16px; }
+
+/* Configure step */
+.configurePage { background: var(--white); }
+
+.configCard {
+  margin: 0 16px 16px;
+  background: var(--white);
+  border-radius: var(--r-xl);
+  padding: 20px;
+  border: 1px solid var(--g150);
+  box-shadow: var(--sh-card);
+}
+
+.amtDisplay { text-align: center; margin-bottom: 20px; }
+.amtVal { display: block; font-size: 40px; font-weight: 900; color: var(--tcb-red); letter-spacing: -1px; margin-bottom: 4px; }
+.amtLabel { font-size: 14px; color: var(--g400); }
+
+.sliderHints { display: flex; justify-content: space-between; margin-top: 6px; font-size: 11px; color: var(--g400); margin-bottom: 20px; }
+
+.configStats { display: flex; gap: 0; background: var(--g050); border-radius: var(--r-lg); overflow: hidden; }
+.configStat { flex: 1; padding: 12px 10px; text-align: center; border-right: 1px solid var(--g150); }
+.configStat:last-child { border-right: none; }
+.configStatVal { font-size: 16px; font-weight: 800; color: var(--g900); margin-bottom: 2px; }
+.configStatLbl { font-size: 9px; color: var(--g400); }

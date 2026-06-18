@@ -1,0 +1,201 @@
+.page { background: var(--g100); min-height: 100vh; }
+
+/* Logo ribbon */
+.logoRibbon {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 20px 12px;
+  background: var(--white);
+  /* Removed bottom border as requested */
+}
+.logoText { font-size: 12px; color: var(--g500); font-weight: 500; }
+
+/* Goal card with real bg */
+.goalSection { 
+  padding: 0 16px; 
+  position: relative;
+  background: linear-gradient(to bottom, var(--white) 50%, var(--g100) 50%);
+}
+
+.mascotWrapper {
+  position: absolute;
+  top: -24px;
+  right: 24px;
+  z-index: 10;
+  pointer-events: none;
+}
+.mascotImg {
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
+}
+
+.goalCard {
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  box-shadow: var(--sh-md);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.goalOverlay {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.85) 100%);
+  padding: 20px;
+  color: #fff;
+}
+
+.goalTop { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 24px; }
+.goalEyebrow { font-size: 12px; color: rgba(255,255,255,0.8); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.goalTitle { font-size: 18px; font-weight: 800; color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,0.5); }
+.goalEdit { 
+  font-size: 13px; font-weight: 600; color: #fff; white-space: nowrap; text-decoration: none; 
+  background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: var(--r-full);
+  backdrop-filter: blur(4px);
+}
+
+.goalAmts { display: flex; justify-content: space-between; margin-bottom: 12px; }
+.goalAmtLabel { font-size: 12px; color: rgba(255,255,255,0.7); margin-bottom: 4px; }
+.goalAmtVal { font-size: 26px; font-weight: 900; letter-spacing: -0.5px; color: var(--tcb-red-mid); text-shadow: 0 1px 4px rgba(0,0,0,0.3); }
+.goalAmtValTarget { font-size: 26px; font-weight: 900; letter-spacing: -0.5px; color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,0.3); }
+
+.progTrackWrapper {
+  width: 100%; height: 6px; 
+  background: rgba(255,255,255,0.2); 
+  border-radius: var(--r-full); 
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.progFillGlow {
+  height: 100%; 
+  background: var(--tcb-red); 
+  border-radius: var(--r-full); 
+  transition: width 0.8s ease;
+  box-shadow: 0 0 8px var(--tcb-red);
+}
+
+.goalMeta { display: flex; justify-content: space-between; }
+.pctText { color: var(--tcb-red-mid); font-weight: 700; font-size: 13px; }
+.metaText { color: rgba(255,255,255,0.7); font-size: 12px; }
+
+.goalStats {
+  display: flex; align-items: center;
+  background: var(--white); border-radius: var(--r-lg);
+  padding: 12px 16px;
+  margin-top: 12px;
+  box-shadow: var(--sh-sm);
+}
+.goalStat { flex: 1; text-align: center; }
+.goalStatVal { font-size: 15px; font-weight: 800; color: var(--g900); margin-bottom: 2px; display: flex; align-items: center; justify-content: center; }
+.goalStatLbl { font-size: 10px; color: var(--g500); }
+.goalStatDiv { width: 1px; height: 32px; background: var(--g150); }
+
+/* Quick grid */
+.quickSection { padding: 16px; background: var(--g100); }
+
+.quickGrid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
+@media (max-width: 380px) { .quickGrid { grid-template-columns: repeat(3, 1fr); gap: 12px 6px; } }
+
+.quickCell {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  text-decoration: none; padding: 6px 2px;
+  border-radius: var(--r-md); transition: transform 0.15s;
+}
+.quickCell:active { transform: scale(0.95); }
+
+.quickCellIcon {
+  width: 48px; height: 48px;
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--sh-sm);
+  background: var(--white);
+}
+
+.quickCellLabel {
+  font-size: 10px; font-weight: 600; color: var(--g800);
+  white-space: pre-line; text-align: center; line-height: 1.25;
+}
+
+/* Recommendations Pagination */
+.recSection { padding: 16px 0; background: var(--white); }
+
+.recCarousel {
+  display: flex; gap: 12px; overflow-x: auto;
+  padding: 0 16px 8px;
+  scrollbar-width: none; -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
+.recCarousel::-webkit-scrollbar { display: none; }
+
+.recCard {
+  min-width: 260px; height: 160px; flex-shrink: 0;
+  border-radius: var(--r-lg); overflow: hidden;
+  background-size: cover; background-position: center;
+  position: relative; text-decoration: none;
+  scroll-snap-align: start;
+  box-shadow: var(--sh-sm);
+}
+.recCardOverlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.8) 100%);
+  display: flex; flex-direction: column; justify-content: space-between;
+  padding: 14px; color: #fff;
+}
+.recCardTag {
+  align-self: flex-start;
+  background: rgba(255,255,255,0.25); backdrop-filter: blur(4px);
+  padding: 4px 10px; border-radius: var(--r-full);
+  font-size: 10px; font-weight: 700; color: #fff;
+}
+.recCardBottom { margin-top: auto; }
+.recCardTitle { font-size: 16px; font-weight: 800; margin-bottom: 2px; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+.recCardDesc { font-size: 12px; color: rgba(255,255,255,0.85); margin-bottom: 6px; }
+.recCardPrice { font-size: 16px; font-weight: 800; color: var(--tcb-red-mid); text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+
+/* Journey steps */
+.journeySteps {
+  display: flex; align-items: flex-start;
+  padding: 8px 20px 20px;
+  background: var(--white);
+  overflow-x: auto; gap: 0;
+  scrollbar-width: none;
+}
+.journeySteps::-webkit-scrollbar { display: none; }
+
+.step { display: flex; flex-direction: column; align-items: center; min-width: 60px; }
+.stepDotWrap { display: flex; align-items: center; width: 100%; justify-content: center; position: relative; }
+.stepDot {
+  width: 28px; height: 28px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700; color: #fff;
+  flex-shrink: 0; z-index: 1;
+}
+.stepLine {
+  position: absolute; top: 50%; left: calc(50% + 14px); right: calc(-50% + 14px);
+  height: 2px; z-index: 0;
+}
+.stepLabel {
+  font-size: 9px; text-align: center; margin-top: 6px;
+  line-height: 1.3; max-width: 54px; color: var(--g400);
+}
+
+/* Activity section */
+.activitySection { background: var(--white); padding: 16px 0; }
+.activityList { display: flex; flex-direction: column; padding: 0 16px; }
+.activityItem {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--g150);
+}
+.activityItem:last-child { border-bottom: none; }
+.activityIcon {
+  width: 40px; height: 40px;
+  border-radius: var(--r-full);
+  background: var(--g050); border: 1px solid var(--g150);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; flex-shrink: 0;
+}
+.activityContent { flex: 1; min-width: 0; }
+.activityTitle { font-size: 13px; font-weight: 600; color: var(--g900); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.activityDate { font-size: 11px; color: var(--g400); margin-top: 2px; }
+.activityRight { display: flex; flex-direction: column; align-items: flex-end; justify-content: center; flex-shrink: 0; }
+.amtPositive { font-size: 14px; font-weight: 700; color: #16A34A; }
+.amtNegative { font-size: 14px; font-weight: 700; color: var(--g900); }
+.pointsPositive { font-size: 12px; font-weight: 700; color: #D97706; margin-top: 2px; }
