@@ -1,0 +1,356 @@
+.page {
+  background: var(--white);
+  min-height: 100vh;
+  padding-bottom: 32px;
+}
+
+/* Header */
+.header {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  z-index: 10;
+}
+.iconBtnWhite {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(4px);
+  border-radius: var(--r-full);
+}
+.headerTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+/* Hero Section */
+.heroSection {
+  padding-bottom: 24px;
+}
+.heroCard {
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.9) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+.heroTop {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 56px; /* below header */
+}
+.heroFlag {
+  width: 32px;
+  height: 32px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(4px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.heroBottom {
+  display: flex;
+  flex-direction: column;
+}
+.goalName {
+  font-size: 28px;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  margin-bottom: 4px;
+  text-transform: capitalize;
+}
+.accNum {
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+  font-family: monospace;
+}
+
+/* Progress Section */
+.progressSection {
+  padding: 20px;
+  background: var(--white);
+  border-radius: 24px 24px 0 0;
+  margin-top: -24px;
+  position: relative;
+  z-index: 5;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.05);
+}
+.progTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 8px;
+}
+.progLabel { font-size: 13px; font-weight: 600; color: var(--g700); }
+.progPct { font-size: 18px; font-weight: 800; color: var(--tcb-red); }
+.progAmts {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.progAmtVal { font-size: 20px; font-weight: 800; color: var(--g900); }
+.progAmtTarget { font-size: 13px; color: var(--g500); font-weight: 600; }
+.daysLeft {
+  display: inline-block;
+  background: var(--g100);
+  padding: 4px 10px;
+  border-radius: var(--r-full);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--g600);
+}
+
+.section {
+  padding: 20px;
+}
+
+/* Stats & Gamification */
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.statCard {
+  background: var(--white);
+  border: 1px solid var(--g150);
+  border-radius: var(--r-lg);
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--sh-sm);
+}
+.statIconBg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.statVal { font-size: 16px; font-weight: 800; color: var(--g900); margin-bottom: 2px; }
+.statLabel { font-size: 11px; color: var(--g500); }
+
+/* Calendar */
+.calendarCard {
+  background: var(--white);
+  border: 1px solid var(--g150);
+  border-radius: var(--r-xl);
+  padding: 16px;
+  box-shadow: var(--sh-sm);
+  margin-bottom: 20px;
+}
+.calDaysRow {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--g400);
+  margin-bottom: 12px;
+}
+.calGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+  justify-items: center;
+}
+.calCellEmpty { width: 24px; height: 24px; }
+.calCell {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+.calCellSaved { background: #22C55E; box-shadow: 0 2px 4px rgba(34,197,94,0.3); }
+.calCellMissed { background: var(--g200); }
+.milestoneText {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--g700);
+  text-align: center;
+  background: #FFFBEB;
+  padding: 10px;
+  border-radius: var(--r-md);
+  color: #D97706;
+}
+
+/* Actions List */
+.actionsBox {
+  background: var(--g050);
+  border-radius: var(--r-lg);
+  padding: 16px;
+}
+.actionsBoxTitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--g600);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+.actionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.actionRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.actionRowLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--g800);
+  font-weight: 500;
+}
+.actionIconSm {
+  color: var(--g500);
+  display: flex;
+  align-items: center;
+}
+.actionPoints {
+  font-size: 12px;
+  font-weight: 700;
+  color: #3B82F6;
+  background: #EFF6FF;
+  padding: 4px 8px;
+  border-radius: var(--r-full);
+}
+
+/* Coaching Section */
+.coachSection { padding: 0 20px 20px; }
+.coachCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: linear-gradient(135deg, #FFF5F5, #FFF0F0);
+  border: 1px solid #FFCED0;
+  border-radius: var(--r-xl);
+  padding: 16px;
+  box-shadow: var(--sh-sm);
+}
+.mascotBg {
+  background: #fff;
+  border-radius: 12px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  flex-shrink: 0;
+}
+.coachMsg {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--g900);
+  line-height: 1.4;
+}
+
+/* Friend Activity */
+.activityList { display: flex; flex-direction: column; }
+.faRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--g150);
+}
+.faRow:last-child { border-bottom: none; }
+.faAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #A855F7, #D946EF);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.faRow:nth-child(even) .faAvatar { background: linear-gradient(135deg, #3B82F6, #06B6D4); }
+.faText {
+  flex: 1;
+  font-size: 13px;
+  color: var(--g700);
+  line-height: 1.4;
+}
+.faText b { color: var(--g900); }
+.faTime {
+  font-size: 11px;
+  color: var(--g400);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.nudgeCard {
+  background: var(--tcb-red-bg);
+  color: var(--tcb-red);
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  padding: 12px;
+  border-radius: var(--r-md);
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+/* Leaderboard */
+.leaderboardBox {
+  border: 1px solid var(--g150);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+.lbRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--white);
+  border-bottom: 1px solid var(--g150);
+}
+.lbRow:last-child { border-bottom: none; }
+.lbRowYou { background: #FFF5F5; }
+.lbRank { width: 20px; font-size: 14px; font-weight: 700; color: var(--g500); text-align: center; }
+.lbAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--g200);
+  color: var(--g700);
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lbName { flex: 1; font-size: 14px; font-weight: 600; color: var(--g900); }
+.lbInfo { text-align: right; }
+.lbAmt { font-size: 14px; font-weight: 700; color: var(--tcb-red); margin-bottom: 2px; }
+.lbStreak { font-size: 11px; color: var(--g600); font-weight: 500; }

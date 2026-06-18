@@ -13,7 +13,7 @@ export const currentUser = {
   readinessLevel: 3,
   readinessLabel: "Near Ready",
   totalSaved: 142_500_000,
-  savingStreak: 8,
+  savingStreak: 12,
   uPoints: 4750,
   badges: [
     { id: "b1", name: "First Step", icon: "🎯", earned: true },
@@ -508,4 +508,276 @@ export const testimonials = [
     avatar: "DH",
     level: 2,
   },
+];
+
+// ============================================================
+// TECHZ ASSET JOURNEY — GAMIFIED SAVINGS
+// ============================================================
+
+export const savingTerms = [
+  { months: 3,  maxRate: 4.65, maturityDate: "19 thg 9 2026" },
+  { months: 4,  maxRate: 4.65, maturityDate: "19 thg 10 2026" },
+  { months: 5,  maxRate: 4.65, maturityDate: "19 thg 11 2026" },
+  { months: 6,  maxRate: 6.55, maturityDate: "19 thg 12 2026" },
+  { months: 7,  maxRate: 6.55, maturityDate: "19 thg 1 2027" },
+  { months: 12, maxRate: 6.80, maturityDate: "19 thg 6 2027" },
+  { months: 18, maxRate: 7.20, maturityDate: "19 thg 12 2027" },
+  { months: 24, maxRate: 7.50, maturityDate: "19 thg 6 2028" },
+  { months: 36, maxRate: 7.90, maturityDate: "19 thg 6 2029" },
+];
+
+export const partnerHouseDeals = [
+  {
+    id: "phd1",
+    brand: "MASTERISE HOMES",
+    name: "Masterise West Heights (Hàng ...",
+    desc: "Căn hộ khách sạn hạng sang tại trung tâ...",
+    price: 3_200_000_000,
+    rate: 6.55,
+    techzDeal: "Giảm 3% qua TechZ",
+    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&q=80",
+  },
+  {
+    id: "phd2",
+    brand: "MASTERISE HOMES",
+    name: "Masterise Centre Point (Hồ Chí...",
+    desc: "Chung cư sinh thái cao cấp khép kín tại...",
+    price: 3_600_000_000,
+    rate: 6.55,
+    techzDeal: "Miễn phí 2 năm phí quản lý",
+    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&q=80",
+  },
+  {
+    id: "phd3",
+    brand: "ONEHOUSING",
+    name: "Vinhomes Grand Park (Quận 9)",
+    desc: "Đại đô thị đẳng cấp với hệ sinh thái...",
+    price: 2_200_000_000,
+    rate: 6.80,
+    techzDeal: "Tặng gói nội thất 50 triệu",
+    image: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=400&q=80",
+  },
+  {
+    id: "phd4",
+    brand: "ONEHOUSING",
+    name: "The Metropole Thu Thiem",
+    desc: "Khu đô thị cao cấp view sông Sài Gòn...",
+    price: 5_500_000_000,
+    rate: 7.20,
+    techzDeal: "Giảm 5% qua TechZ",
+    image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&q=80",
+  },
+];
+
+export const partnerCarDeals = [
+  {
+    id: "pcd1",
+    brand: "VINFAST",
+    name: "VinFast VF9 Plus Crimson (Biệt...",
+    desc: "Xe SUV điện thông minh hạng E cỡ lớn...",
+    price: 1_850_000_000,
+    rate: 6.1,
+    techzDeal: "12 tháng sạc miễn phí",
+    image: "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=400&q=80",
+  },
+  {
+    id: "pcd2",
+    brand: "VINFAST",
+    name: "VinFast VF8 Eco Smart Blue",
+    desc: "Mẫu xe điện vượt mong đợi, thể thao trẻ...",
+    price: 1_420_000_000,
+    rate: 5.95,
+    techzDeal: "Giảm 50% bảo hiểm năm đầu",
+    image: "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=400&q=80",
+  },
+  {
+    id: "pcd3",
+    brand: "VINFAST",
+    name: "VinFast VF5 Plus",
+    desc: "Xe điện đô thị thông minh, nhỏ gọn...",
+    price: 458_000_000,
+    rate: 5.50,
+    techzDeal: "Tặng gói phụ kiện 20 triệu",
+    image: "https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=400&q=80",
+  },
+  {
+    id: "pcd4",
+    brand: "VINFAST",
+    name: "VinFast VF3 — Smart City EV",
+    desc: "Xe điện mini đô thị, linh hoạt mọi cung...",
+    price: 235_000_000,
+    rate: 4.65,
+    techzDeal: "Giảm 10% khi thanh toán qua TCB",
+    image: "https://images.unsplash.com/photo-1606611013016-969c19ba27b5?w=400&q=80",
+  },
+];
+
+export const friendActivity = [
+  {
+    id: "fa1",
+    name: "Minh T.",
+    avatar: "MT",
+    action: "saved" as const,
+    amount: 500_000,
+    goal: "Xe VF5",
+    time: "2 phút trước",
+  },
+  {
+    id: "fa2",
+    name: "Linh P.",
+    avatar: "LP",
+    action: "streak" as const,
+    streakDays: 30,
+    time: "1 giờ trước",
+  },
+  {
+    id: "fa3",
+    name: "Đức H.",
+    avatar: "DH",
+    action: "invite" as const,
+    campaign: "Mua nhà trước 30",
+    time: "3 giờ trước",
+  },
+  {
+    id: "fa4",
+    name: "Hoa N.",
+    avatar: "HN",
+    action: "saved" as const,
+    amount: 1_000_000,
+    goal: "Masterise Centre Point",
+    time: "5 giờ trước",
+  },
+  {
+    id: "fa5",
+    name: "Tuấn A.",
+    avatar: "TA",
+    action: "milestone" as const,
+    milestone: "Đạt 50% mục tiêu",
+    time: "Hôm qua",
+  },
+];
+
+export const friendLeaderboard = [
+  { rank: 1, name: "Linh P.", avatar: "LP", saved: 45_000_000, streakDays: 30, isYou: false },
+  { rank: 2, name: "Bạn", avatar: "AN", saved: 42_000_000, streakDays: 12, isYou: true },
+  { rank: 3, name: "Minh T.", avatar: "MT", saved: 38_000_000, streakDays: 8, isYou: false },
+  { rank: 4, name: "Đức H.", avatar: "DH", saved: 25_000_000, streakDays: 5, isYou: false },
+  { rank: 5, name: "Hoa N.", avatar: "HN", saved: 18_000_000, streakDays: 3, isYou: false },
+];
+
+export const tekTekMessages = {
+  consistent: {
+    mascot: "/mascot/excited.png",
+    message: "Tuyệt vời! Bạn đang trong top 10% người tiết kiệm đều đặn nhất! 🌟",
+  },
+  streakWarning: {
+    mascot: "/mascot/confident.png",
+    message: "Hôm nay bạn chưa gửi tiết kiệm. Chỉ cần ₫50,000 để giữ chuỗi! 💪",
+  },
+  friendSaved: {
+    mascot: "/mascot/pointing.png",
+    message: "Minh T. vừa gửi ₫500K. Bạn có muốn gửi ngay không? 🤝",
+  },
+  milestone: {
+    mascot: "/mascot/celebrate.png",
+    message: "Chúc mừng! Bạn đã đạt 10% mục tiêu! Tiếp tục nhé! 🎉",
+  },
+  welcome: {
+    mascot: "/mascot/fun.png",
+    message: "Mục tiêu phổ biến nhất hiện nay là mua nhà đấy! +50 U-Points khi hoàn tất 🏡",
+  },
+  saving: {
+    mascot: "/mascot/saved.png",
+    message: "Với mục tiêu ₫3B, chỉ cần gửi ~₫8M/tháng trong 36 tháng! 💰",
+  },
+  term: {
+    mascot: "/mascot/wise.png",
+    message: "Kỳ hạn 12 tháng trở lên sẽ nhận lãi suất tốt hơn nhiều! 📈",
+  },
+  deal: {
+    mascot: "/mascot/pointing.png",
+    message: "Masterise West Heights đang có ưu đãi đặc biệt cho khách hàng Techcombank! 🎁",
+  },
+  success: {
+    mascot: "/mascot/celebrate.png",
+    message: "Chúc mừng! Hành trình tích luỹ đã bắt đầu! 🎉",
+  },
+  dailyDone: {
+    mascot: "/mascot/dailydone.png",
+    message: "Bạn đã hoàn thành nhiệm vụ hôm nay! +10 U-Points ✅",
+  },
+};
+
+export const uPointActions = [
+  { action: "Gửi tiết kiệm đúng hẹn", points: 10, icon: "savings" },
+  { action: "Xem deal đối tác", points: 5, icon: "visibility" },
+  { action: "Mời bạn bè tham gia", points: 100, icon: "group_add" },
+  { action: "Duy trì chuỗi 7 ngày", points: 50, icon: "local_fire_department" },
+  { action: "Hoàn thành thử thách tuần", points: 30, icon: "emoji_events" },
+  { action: "Mở mục tiêu mới", points: 200, icon: "flag" },
+  { action: "Đạt milestone 10%", points: 100, icon: "trending_up" },
+  { action: "Tương tác với TekTek Coach", points: 5, icon: "chat" },
+];
+
+export const techzGoals = [
+  {
+    id: "tg1",
+    name: "Alex Dream House",
+    type: "home" as const,
+    accountNumber: "1460 3034 5031 91",
+    target: 3_000_000_000,
+    saved: 30_000_000,
+    progress: 1,
+    daysLeft: 94,
+    term: 6,
+    rate: 6.55,
+    maturityAction: "withdraw_all" as const,
+    linkedAsset: "Masterise West Heights",
+    streakDays: 12,
+    uPointsEarned: 1_250,
+    bgImage: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80",
+  },
+  {
+    id: "tg2",
+    name: "xe VinFast",
+    type: "car" as const,
+    accountNumber: "1460 3034 5031 92",
+    target: 458_000_000,
+    saved: 85_000_000,
+    progress: 18.6,
+    daysLeft: 245,
+    term: 12,
+    rate: 6.80,
+    maturityAction: "continue_all" as const,
+    linkedAsset: "VinFast VF5 Plus",
+    streakDays: 8,
+    uPointsEarned: 890,
+    bgImage: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
+  },
+  {
+    id: "tg3",
+    name: "tiêu dùng hàng ngày",
+    type: "custom" as const,
+    accountNumber: "1460 3034 5031 93",
+    target: 50_000_000,
+    saved: 22_000_000,
+    progress: 44,
+    daysLeft: 120,
+    term: 6,
+    rate: 6.55,
+    maturityAction: "withdraw_interest" as const,
+    linkedAsset: null,
+    streakDays: 5,
+    uPointsEarned: 450,
+    bgImage: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+  },
+];
+
+// Streak calendar — last 30 days of saving activity
+export const streakCalendar = [
+  true, true, true, true, true, false, true,
+  true, true, true, false, true, true, true,
+  true, true, true, true, true, true, false,
+  true, true, true, true, true, true, true,
+  true, true,
 ];

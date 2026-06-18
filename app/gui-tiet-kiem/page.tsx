@@ -54,18 +54,6 @@ const products = [
     ],
     featured: false,
   },
-  {
-    href: null,
-    imageSrc: "/images/TichLuyNhuY.png",
-    eyebrow: "Tích lũy Như Ý",
-    title: "Gửi tiết kiệm để vun đắp mục tiêu",
-    bullets: [
-      "Nếu bạn muốn gửi tiết kiệm đều đặn và tích lũy cho một mục tiêu cụ thể",
-      "Phù hợp nhất cho 6 – 18 tháng",
-      "Gửi từ VND 100,000",
-    ],
-    featured: false,
-  },
 ];
 
 export default function GuiTietKiemPage() {

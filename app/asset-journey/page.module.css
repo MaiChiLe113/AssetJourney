@@ -34,6 +34,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
+  display: block;
 }
 
 .goalOverlay {
@@ -199,3 +200,95 @@
 .amtPositive { font-size: 14px; font-weight: 700; color: #16A34A; }
 .amtNegative { font-size: 14px; font-weight: 700; color: var(--g900); }
 .pointsPositive { font-size: 12px; font-weight: 700; color: #D97706; margin-top: 2px; }
+
+/* Gamification Bar */
+.gamifyBar {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: var(--white);
+  gap: 0;
+}
+.gamifyItem {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+}
+.gamifyVal { font-size: 14px; font-weight: 800; color: var(--g900); }
+.gamifyLabel { font-size: 10px; color: var(--g500); }
+.gamifyDivider { width: 1px; height: 24px; background: var(--g200); flex-shrink: 0; }
+
+/* TechZ Deals Banner */
+.dealsBanner {
+  margin: 12px 16px;
+  background: linear-gradient(135deg, #ED1C24 0%, #C5151B 100%);
+  border-radius: var(--r-lg);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.dealsBannerLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.dealsBannerTitle { font-size: 13px; font-weight: 700; color: #fff; }
+.dealsBannerDesc { font-size: 10px; color: rgba(255,255,255,0.8); margin-top: 2px; }
+.dealsBannerBtn {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 700;
+  color: #ED1C24;
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: var(--r-full);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Friend Activity Nudge */
+.friendNudge {
+  margin: 0 16px 12px;
+  background: var(--white);
+  border-radius: var(--r-lg);
+  padding: 12px 0;
+  border: 1px solid var(--g150);
+}
+.friendNudgeItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+}
+.friendAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ED1C24, #FF6B6B);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.friendText { flex: 1; font-size: 12px; color: var(--g700); line-height: 1.3; }
+.friendTime { font-size: 10px; color: var(--g400); flex-shrink: 0; }
+.friendNudgeCta {
+  margin: 8px 16px 0;
+  padding: 10px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--tcb-red);
+  background: var(--tcb-red-bg);
+  border-radius: var(--r-md);
+  cursor: pointer;
+}
+
