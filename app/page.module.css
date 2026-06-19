@@ -188,29 +188,47 @@
 .promoRate { font-size: 20px; font-weight: 900; color: #fff; letter-spacing: -0.5px; }
 
 /* TechZ teaser */
+/* TechZ teaser */
 .promoCardAj {
-  display: flex; min-width: 220px; flex-shrink: 0;
-  background: linear-gradient(135deg, #FFF9F9 0%, #FFF0F0 100%);
-  border: 1.5px solid var(--tcb-red-mid);
-  border-radius: var(--r-xl); padding: 16px;
-  text-decoration: none; align-items: center; gap: 10px;
+  display: block; min-width: 240px; flex-shrink: 0;
+  background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80');
+  background-size: cover;
+  background-position: center;
+  border: none;
+  border-radius: var(--r-xl);
+  text-decoration: none;
   transition: transform 0.15s;
+  position: relative;
+  overflow: hidden;
+  min-height: 140px;
 }
 .promoCardAj:active { transform: scale(0.97); }
-.promoAjLeft { flex: 1; }
+.promoAjOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.85) 100%);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.promoAjTextContainer {
+  margin-top: auto;
+}
 .promoAjTag {
-  display: flex; align-items: center; gap: 5px;
-  font-size: 10px; font-weight: 700; color: var(--tcb-red);
-  margin-bottom: 5px;
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 10px; font-weight: 700; color: #fff;
+  background: var(--tcb-red);
+  padding: 3px 8px;
+  border-radius: 12px;
+  align-self: flex-start;
 }
 .liveDot {
   width: 6px; height: 6px; border-radius: 50%;
-  background: var(--tcb-red);
+  background: #fff;
   animation: pulseDot 1.5s infinite;
 }
-.promoAjTitle { font-size: 14px; font-weight: 800; color: var(--g900); margin-bottom: 4px; }
-.promoAjDesc { font-size: 11px; color: var(--g500); line-height: 1.35; }
-.promoAjRight { font-size: 28px; line-height: 1.2; }
+.promoAjTitle { font-size: 16px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+.promoAjDesc { font-size: 12px; color: rgba(255,255,255,0.9); line-height: 1.35; }
 
 /* Dots */
 .dotRow { display: flex; gap: 5px; justify-content: center; padding: 10px 0 4px; }

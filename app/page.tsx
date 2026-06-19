@@ -122,17 +122,18 @@ export default function HomePage() {
 
           {/* TechZ teaser */}
           <Link href="/gui-tiet-kiem" className={styles.promoCardAj}>
-            <div className={styles.promoAjLeft}>
+            <div className={styles.promoAjOverlay}>
               <div className={styles.promoAjTag}>
                 <span className={styles.liveDot} />
                 MỚI
               </div>
-              <div className={styles.promoAjTitle}>TechZ Asset Journey</div>
-              <div className={styles.promoAjDesc}>
-                Tích lũy thông minh để sở hữu nhà, xe và tài sản đầu đời
+              <div className={styles.promoAjTextContainer}>
+                <div className={styles.promoAjTitle}>TechZ Asset Journey</div>
+                <div className={styles.promoAjDesc}>
+                  Cùng mua nhà với OneHousing và Techcombank
+                </div>
               </div>
             </div>
-            <div className={styles.promoAjRight}>🏡🚗</div>
           </Link>
         </div>
 
