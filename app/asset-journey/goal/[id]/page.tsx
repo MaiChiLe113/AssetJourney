@@ -40,7 +40,7 @@ export default function GoalDetailPage({ params }: { params: Promise<{ id: strin
     <div className={styles.page}>
       {/* HEADER */}
       <div className={styles.header}>
-        <Link href="/asset-journey" className={styles.iconBtnWhite}>
+        <Link href={`/asset-journey/${goal.id}`} className={styles.iconBtnWhite}>
           <ArrowBackIosNewRoundedIcon sx={{ fontSize: 20 }} />
         </Link>
         <div className={styles.headerTitle}>Chi tiết mục tiêu</div>

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { properties } from "@/data/mockData";
 import styles from "./page.module.css";
@@ -23,6 +24,7 @@ const fmt = (n: number) =>
   n >= 1e9 ? `${(n / 1e9).toFixed(2)}B` : `${(n / 1e6).toFixed(0)}M`;
 
 export default function HomeJourneyPage() {
+  const router = useRouter();
   const [idx, setIdx] = useState(0);
   const [monthly, setMonthly] = useState(8);
   const [dpPct, setDpPct] = useState(30);
@@ -49,9 +51,9 @@ export default function HomeJourneyPage() {
     <div className={styles.page}>
       {/* Header */}
       <div className={styles.pageHeader}>
-        <Link href="/asset-journey" className={styles.backBtn}>
+        <div onClick={() => router.back()} className={styles.backBtn} style={{ cursor: "pointer" }}>
           <ArrowBackIosNewRoundedIcon sx={{ fontSize: 18, color: "#1A1A1A" }} />
-        </Link>
+        </div>
         <div className={styles.headerTitle}>Home Journey</div>
         <div style={{ width: 40 }} />
       </div>

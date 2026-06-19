@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import ArrowBackIosNewRoundedIcon from "@mui/icons-material/ArrowBackIosNewRounded";
 import NotificationsActiveRoundedIcon from "@mui/icons-material/NotificationsActiveRounded";
@@ -20,6 +21,7 @@ const frequencies: { id: Freq; label: string; desc: string }[] = [
 const amounts = [1, 2, 3, 5, 8, 10, 15, 20];
 
 export default function SchedulePage() {
+  const router = useRouter();
   const [freq, setFreq] = useState<Freq>("monthly-start");
   const [amount, setAmount] = useState(8);
   const [notifOn, setNotifOn] = useState(true);
@@ -30,9 +32,9 @@ export default function SchedulePage() {
   return (
     <div className={styles.page}>
       <div className="page-header" style={{ background: "#fff" }}>
-        <Link href="/asset-journey" className="back-btn">
+        <div onClick={() => router.back()} className="back-btn" style={{ cursor: "pointer" }}>
           <ArrowBackIosNewRoundedIcon sx={{ fontSize: 20, color: "#1A1A1A" }} />
-        </Link>
+        </div>
         <div className="page-header-title">Nhắc góp quỹ</div>
         <div style={{ width: 42 }} />
       </div>
@@ -154,9 +156,9 @@ export default function SchedulePage() {
           </button>
         )}
         <div style={{ height: 10 }} />
-        <Link href="/asset-journey" className="btn btn-ghost" style={{ display: "flex", marginTop: 8 }}>
+        <div onClick={() => router.back()} className="btn btn-ghost" style={{ display: "flex", marginTop: 8, cursor: "pointer", justifyContent: "center" }}>
           Quay lại
-        </Link>
+        </div>
       </div>
 
       <div style={{ height: 24 }} />

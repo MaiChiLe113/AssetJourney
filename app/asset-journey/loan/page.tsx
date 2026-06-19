@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import ArrowBackIosNewRoundedIcon from "@mui/icons-material/ArrowBackIosNewRounded";
 import AccountBalanceRoundedIcon from "@mui/icons-material/AccountBalanceRounded";
@@ -45,14 +46,15 @@ const factors = [
 ];
 
 export default function LoanSuggestionPage() {
+  const router = useRouter();
   const readinessScore = 68;
 
   return (
     <div className={styles.page}>
       <div className="page-header" style={{ background: "#fff" }}>
-        <Link href="/asset-journey" className="back-btn">
+        <div onClick={() => router.back()} className="back-btn" style={{ cursor: "pointer" }}>
           <ArrowBackIosNewRoundedIcon sx={{ fontSize: 20, color: "#1A1A1A" }} />
-        </Link>
+        </div>
         <div className="page-header-title">Gợi ý vay</div>
         <div style={{ width: 42 }} />
       </div>

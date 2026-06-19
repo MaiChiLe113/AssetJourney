@@ -292,3 +292,104 @@
   cursor: pointer;
 }
 
+/* --- TechZ Asset Journey (Plans List) Page Styles --- */
+.createNewCard {
+  background: var(--white);
+  border-radius: var(--r-xl);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: var(--sh-sm);
+  margin-bottom: 20px;
+}
+.createNewIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #EFF6FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.createNewTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--g900);
+  margin-bottom: 4px;
+}
+.createNewDesc {
+  font-size: 12px;
+  color: var(--g500);
+  line-height: 1.4;
+}
+
+.goalList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.goalListCard {
+  background: var(--white);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  box-shadow: var(--sh-md);
+}
+.goalListCardTop {
+  height: 140px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.goalListCardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.goalListCardTitle {
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+.goalListCardAcc {
+  font-size: 12px;
+  color: rgba(255,255,255,0.9);
+  font-family: monospace;
+  margin-top: 4px;
+}
+.goalListCardBottom {
+  padding: 16px;
+}
+.goalListCardRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.goalListCardRow:last-child {
+  margin-bottom: 0;
+}
+.goalListCardProgress {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--g900);
+}
+.goalListCardSaved {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--tcb-red-mid);
+}
+.goalListCardDays {
+  font-size: 12px;
+  color: var(--g500);
+}
+.goalListCardTarget {
+  font-size: 12px;
+  color: var(--g500);
+}
